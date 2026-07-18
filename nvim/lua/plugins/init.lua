@@ -6,5 +6,6 @@ return {
     require("plugins.treesitter"),
     require("plugins.comment"),
     require("plugins.autopairs"),
-    require("plugins.surround")
+    require("plugins.surround"),
+    require("plugins.gitsigns")
 }
