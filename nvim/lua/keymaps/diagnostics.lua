@@ -6,7 +6,6 @@ local function jump_with_float(count)
 		end,
 	})
 end
-
 local severity = vim.diagnostic.severity
 
 local function errors_only()
@@ -39,32 +38,32 @@ vim.diagnostic.config({
 })
 
 vim.keymap.set("n", "<leader>de", errors_only, {
-	desc = "Diagnostics: errors only",
+	desc = "Diagnostics: show only errors in virtual text when you want to focus on critical issues",
 })
 
 vim.keymap.set("n", "<leader>da", all_diagnostics, {
-	desc = "Diagnostics: show all",
+	desc = "Diagnostics: show all diagnostic severities in virtual text when you need full context",
 })
 
 vim.keymap.set("n", "<leader>dn", no_virtual_text, {
-	desc = "Diagnostics: hide virtual text",
+	desc = "Diagnostics: hide virtual text when you want a cleaner buffer view",
 })
 
 
 vim.keymap.set("n", "[d", function()
 	jump_with_float(-1)
 end, {
-	desc = "Previous diagnostic",
+	desc = "Jump to the previous diagnostic and open its float when reviewing issues upward in the file",
 })
 
 vim.keymap.set("n", "]d", function()
 	jump_with_float(1)
 end, {
-	desc = "Next diagnostic",
+	desc = "Jump to the next diagnostic and open its float when reviewing issues downward in the file",
 })
 
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, {
-	desc = "Show diagnostic",
+	desc = "Open the diagnostic float under the cursor when you want details for the current issue",
 })
 
 errors_only()

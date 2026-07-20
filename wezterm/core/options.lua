@@ -1,3 +1,5 @@
+local paths = require("core.paths")
+
 local M = {}
 
 function M.apply(config)
@@ -15,11 +17,11 @@ function M.apply(config)
 
   -- Default shell
   config.default_prog = {
-    [[C:\Users\e339905\AppData\Local\Programs\nu\bin\nu.exe]],
+    paths.nu_exe,
   }
 
   -- Default working directory
-  config.default_cwd = [[C:\Work]]
+  config.default_cwd = paths.work_root
 
   -- General behavior
   config.initial_cols = 130

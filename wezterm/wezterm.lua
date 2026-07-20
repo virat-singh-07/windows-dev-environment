@@ -15,7 +15,6 @@ local mouse = require("core.mouse")
 local keytables = require("core.keytables")
 local events = require("core.events")
 local statusbar = require("features.statusbar")
-local startup = require("features.startup")
 
 options.apply(config)
 appearance.apply(config)
@@ -24,6 +23,5 @@ mouse.apply(config)
 keytables.apply(config)
 statusbar.apply(config)
 events.apply()
-startup.apply()
 
 return config

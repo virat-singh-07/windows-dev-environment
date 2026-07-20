@@ -1,10 +1,11 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 local mux = wezterm.mux
+local paths = require("core.paths")
 
 local M = {}
 
-local wezterm_exe = [[C:\Work\Tools\Wezterm\wezterm.exe]]
+local wezterm_exe = paths.wezterm_exe
 
 function M.switcher()
     return act.ShowLauncherArgs({

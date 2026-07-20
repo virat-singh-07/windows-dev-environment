@@ -1,6 +1,7 @@
 # Nushell environment entry point
 
-source-env env/editor.nu
-source-env env/git.nu
-source-env env/variables.nu
-source-env env/path.nu
+source-env C:/Work/Config/nushell/env/shared.nu
+source-env C:/Work/Config/nushell/env/editor.nu
+source-env C:/Work/Config/nushell/env/git.nu
+source-env C:/Work/Config/nushell/env/variables.nu
+source-env C:/Work/Config/nushell/env/path.nu

@@ -5,7 +5,7 @@ export def --env main [] {
       --max-depth 1
       --absolute-path
       .
-      C:\Work\Projects
+      $env.PROJECTS_ROOT
     | ^fzf
         --prompt "Project > "
         --height 70%

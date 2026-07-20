@@ -14,7 +14,7 @@ let just_dir = (
     | path join "Programs" "scoop" "apps" "just" "current"
 )
 
-let msys2_ucrt64_bin = 'C:\Work\MYSYS2\ucrt64\bin'
+let msys2_ucrt64_bin = ($env.MSYS2_ROOT | path join 'ucrt64' 'bin')
 
 let additional_paths = [
     $delta_dir

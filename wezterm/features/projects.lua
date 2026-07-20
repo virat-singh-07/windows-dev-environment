@@ -1,10 +1,11 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 local mux = wezterm.mux
+local paths = require("core.paths")
 
 local M = {}
 
-local projects_root = [[C:\Work\Projects]]
+local projects_root = paths.projects_root
 
 local function get_projects()
   local choices = {}

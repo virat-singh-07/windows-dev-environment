@@ -1,2 +1,7 @@
+require("keymaps.conform").setup()
 require("keymaps.diagnostics")
+require("keymaps.gitsigns")
 require("keymaps.lsp")
+require("keymaps.neogit").setup()
+require("keymaps.telescope").setup()
+require("keymaps.theme")

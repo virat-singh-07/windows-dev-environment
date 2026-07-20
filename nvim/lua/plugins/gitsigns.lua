@@ -1,34 +1,13 @@
 return {
 	"lewis6991/gitsigns.nvim",
 	opts = {
+		current_line_blame = true,
+		current_line_blame_opts = {
+			delay = 800,
+			ignore_whitespace = false,
+		},
 		on_attach = function(bufnr)
-			local gs = package.loaded.gitsigns
-
-			vim.keymap.set("n", "]h", function()
-				gs.next_hunk()
-			end, {
-				buffer = bufnr,
-			})
-			vim.keymap.set("n", "[h", function()
-				gs.prev_hunk()
-			end, {
-				buffer = bufnr,
-			})
-			vim.keymap.set("n", "<leader>hp", function()
-				gs.preview_hunk()
-			end, {
-				buffer = bufnr,
-			})
-			vim.keymap.set("n", "<leader>hs", function()
-				gs.stage_hunk()
-			end, {
-				buffer = bufnr,
-			})
-			vim.keymap.set("n", "<leader>hu", function()
-				gs.undo_stage_hunk()
-			end, {
-				buffer = bufnr,
-			})
+			require("keymaps.gitsigns").attach(bufnr)
 		end,
 	},
 }
