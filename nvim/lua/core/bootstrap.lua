@@ -19,4 +19,7 @@ vim.opt.rtp:prepend(lazy_path)
 local lazy = require("lazy")
 lazy.setup({
 	spec = plugins,
+	rocks = {
+		enabled = false,
+	}
 })

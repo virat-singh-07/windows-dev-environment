@@ -3,21 +3,21 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 
-	config = function()
-		local treesitter = require("nvim-treesitter")
-
-		treesitter.setup()
-
-		treesitter.install({
-			"lua",
-			"vim",
-			"vimdoc",
-			"javascript",
-			"typescript",
-			"tsx",
-			"html",
-			"css",
-			"json",
-		})
-	end,
+	-- config = function()
+	-- 	local treesitter = require("nvim-treesitter")
+	--
+	-- 	treesitter.setup()
+	--
+	-- 	treesitter.install({
+	-- 		"lua",
+	-- 		"vim",
+	-- 		"vimdoc",
+	-- 		"javascript",
+	-- 		"typescript",
+	-- 		"tsx",
+	-- 		"html",
+	-- 		"css",
+	-- 		"json",
+	-- 	})
+	-- end,
 }
