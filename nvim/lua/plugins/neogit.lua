@@ -4,5 +4,10 @@ return {
 		"nvim-lua/plenary.nvim",
 		"sindrets/diffview.nvim",
 	},
-	opts = {},
+	opts = {
+		auto_refresh = false,
+		filewatcher = {
+			enabled = false,
+		},
+	},
 }
