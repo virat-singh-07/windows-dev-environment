@@ -13,6 +13,23 @@ local function save_theme(theme)
 	vim.fn.writefile({ theme }, theme_state_file)
 end
 
+local function apply_diagnostic_highlights()
+	vim.api.nvim_set_hl(0, "DiagnosticLineNrError", {
+		fg = "#ea6962",
+		bold = true,
+	})
+
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", {
+		fg = "#ea6962",
+		bold = true,
+	})
+
+	vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", {
+		fg = "#d8a657",
+		bold = true,
+	})
+end
+
 local function apply_transparency()
 	local groups = {
 		"Normal",
@@ -100,6 +117,7 @@ local function apply_theme(theme)
 	local entry = themes[theme] or themes["rose-pine"]
 	entry.setup()
 	vim.cmd.colorscheme(theme)
+	apply_diagnostic_highlights()
 	apply_transparency()
 	save_theme(theme)
 end

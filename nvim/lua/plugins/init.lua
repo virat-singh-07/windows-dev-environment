@@ -7,8 +7,10 @@ return {
     require("plugins.autopairs"),
     require("plugins.surround"),
     require("plugins.gitsigns"),
-    require("plugins.neogit"),
+    require("plugins.fugitive"),
     require("plugins.lsp"),
+    require("plugins.lualine"),
+    require("plugins.nvim-tree"),
     require("plugins.flash"),
     require("plugins.trouble"),
     require("plugins.colorscheme")
