@@ -16,10 +16,13 @@ let just_dir = (
 
 let msys2_ucrt64_bin = ($env.MSYS2_ROOT | path join 'ucrt64' 'bin')
 
+let git_bash_bin = 'C:\Users\e339905\AppData\Local\Programs\Git\usr\bin'
+
 let additional_paths = [
     $delta_dir
     $just_dir
     $msys2_ucrt64_bin
+    $git_bash_bin
 ]
 
 let existing_paths = (
